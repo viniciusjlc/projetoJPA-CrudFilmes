@@ -108,8 +108,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/enums/ModeloClassificacoesIndicativas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#539#540#0" expanded="true" />
                 <element signature="e#568#569#0" expanded="true" />
@@ -637,12 +637,12 @@
       <workItem from="1574523919867" duration="4355000" />
       <workItem from="1574609489913" duration="16412000" />
       <workItem from="1574693912321" duration="2061000" />
-      <workItem from="1574773724560" duration="1752000" />
+      <workItem from="1574773724560" duration="2084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64852000" />
+    <option name="totallyTimeSpent" value="65184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,11 +654,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Persistence" order="0" sideWeight="0.502439" side_tool="true" weight="0.35627836" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8804071" weight="0.52747256" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.8804071" visible="true" weight="0.52723145" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -1125,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/enums/ModeloClassificacoesIndicativas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#539#540#0" expanded="true" />
             <element signature="e#568#569#0" expanded="true" />
