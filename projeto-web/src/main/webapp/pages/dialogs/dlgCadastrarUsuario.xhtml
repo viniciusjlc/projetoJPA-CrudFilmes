@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalCadastrarUsuario" dynamic="true" widgetVar="dlgCadastrarUsuario"
+          header="Cadastrar Usuario" width="auto" height="auto"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formCadastrar">
+        <p:growl id="msgCad" showDetail="true"/>
+        <h:panelGrid columns="4" id="pnlCadastrar">
+            <p:outputLabel value="Nome: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText value="#{usuarioMB.usuario.nome}" required="true"
+                         requiredMessage="Nome é um campo obrigatório!"/>
+
+            <p:outputLabel value="Genero: "/>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{usuarioMB.usuario.genero}">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems var="ModeloSexo"
+                               value="#{usuarioMB.listaGenero}"
+                               itemLabel="#{ModeloSexo.name()}"
+                               itemValue="#{ModeloSexo.sigla}"/>
+            </p:selectOneMenu>
+
+            <p:outputLabel value="CPF:"/>
+            <p:inputMask
+                    validator="CpfValidator"
+                    mask="999.999.999-99" maxlength="11"
+                    value="#{usuarioMB.usuario.cpf}">
+                <p:ajax event="blur" update=":formCadastrar:msgCad"/>
+            </p:inputMask>
+
+            <p:outputLabel value="Data de Nascimento:"/>
+            <p:calendar locale="pt" validator="DataMenorQueAtualValidator"
+                        maxdate="#{usuarioMB.dataMaxima}"
+                        value="#{usuarioMB.usuario.dataNascimento}"
+                        pattern="dd/MM/yyyy" mask="true">
+            </p:calendar>
+
+
+            <p:outputLabel value="Email:">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText validator="EmailValidator"
+                         required="true" requiredMessage="Email é obrigatorio"
+                         value="#{usuarioMB.usuario.email}"
+                         maxlength="50">
+                <p:ajax update="msgCad"/>
+            </p:inputText>
+
+            <p:outputLabel value="Celular:"/>
+            <p:inputMask
+                    mask="99999-9999" maxlength="10"
+                    value="#{usuarioMB.usuario.celular}">
+            </p:inputMask>
+
+            <div align="center">
+                <p:commandButton value="Cadastrar" action="#{usuarioMB.abrirDialogSenha()}" update=":formCadastrar:msgCad"/>
+            </div>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

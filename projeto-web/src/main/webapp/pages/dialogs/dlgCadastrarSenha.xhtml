@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalCadastrarSenha" dynamic="true" widgetVar="dlgCadastrarSenha"
+          header="Cadastrar Usuario" width="auto" height="auto"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formCadastrarSenha">
+        <p:growl id="msgCadSenha" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlCadastrarSenha">
+            <p:outputLabel value="Senha:" styleClass="campos-lab">
+                <span style="color: red;">* </span>
+            </p:outputLabel>
+            <p:password required="true" requiredMessage="Confirmar senha é obrigatorio"
+                        value="#{usuarioMB.usuario.senha}" feedback="true" inline="true"
+                        maxlength="60">
+                <p:ajax update=":formCadastrarSenha:msgCadSenha"/>
+            </p:password>
+
+            <p:outputLabel value="Confirmar Senha:" styleClass="campos-lab">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:password required="true" requiredMessage="Confirmar senha é obrigatorio"
+                        value="#{usuarioMB.senhaConfirmar}" maxlength="60">
+                <p:ajax update=":formCadastrarSenha:msgCadSenha"/>
+            </p:password>
+
+            <p:commandButton action="#{usuarioMB.cadastrar()}" value="Cadastrar" update=":formCadastrarSenha:msgCadSenha"/>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

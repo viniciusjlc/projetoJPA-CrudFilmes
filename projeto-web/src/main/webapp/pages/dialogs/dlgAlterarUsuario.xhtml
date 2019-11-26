@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalAlterarUsuario" dynamic="true" widgetVar="dlgAlterarUsuario"
+          header="Alterar usuarioSelecionado" width="auto" height="auto"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formAlterarUsuario">
+        <p:growl id="msgAlterarUsuario" showDetail="true"/>
+        <h:panelGrid columns="4" id="pnlAlterarUsuario">
+            <p:outputLabel value="Nome: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText value="#{usuarioMB.usuarioSelecionado.nome}" required="true"
+                         requiredMessage="Nome é um campo obrigatório!"/>
+
+            <p:outputLabel value="Genero: "/>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{usuarioMB.usuarioSelecionado.genero}">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems var="ModeloSexo"
+                               value="#{usuarioMB.listaGenero}"
+                               itemLabel="#{ModeloSexo.name()}"
+                               itemValue="#{ModeloSexo.sigla}"/>
+            </p:selectOneMenu>
+
+            <p:outputLabel value="CPF:"/>
+            <p:inputMask
+                    validator="CpfValidator"
+                    mask="999.999.999-99" maxlength="11"
+                    value="#{usuarioMB.usuarioSelecionado.cpf}">
+                <p:ajax event="blur" update=":formAlterarUsuario:msgAlterarUsuario"/>
+            </p:inputMask>
+
+            <p:outputLabel value="Data de Nascimento:"/>
+            <p:calendar locale="pt" validator="DataMenorQueAtualValidator"
+                        maxdate="#{usuarioMB.dataMaxima}"
+                        value="#{usuarioMB.usuarioSelecionado.dataNascimento}"
+                        pattern="dd/MM/yyyy" mask="true">
+            </p:calendar>
+
+
+            <p:outputLabel value="Email:">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText validator="EmailValidator"
+                         required="true" requiredMessage="Email é obrigatorio"
+                         value="#{usuarioMB.usuarioSelecionado.email}"
+                         maxlength="50">
+                <p:ajax update="msgAlterarUsuario"/>
+            </p:inputText>
+
+            <p:outputLabel value="Celular:"/>
+            <p:inputMask
+                    mask="99999-9999" maxlength="10"
+                    value="#{usuarioMB.usuarioSelecionado.celular}">
+            </p:inputMask>
+
+
+            <p:outputLabel value="Perfil:">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{usuarioMB.usuarioSelecionado.idPerfil}"
+                             rendered="true" requiredMessage="Perfil é obrigatorio">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems var="ModeloPerfil"
+                               value="#{usuarioMB.listaPefil}"
+                               itemLabel="#{ModeloPerfil.descricao}"
+                               itemValue="#{ModeloPerfil.codigo}"/>
+            </p:selectOneMenu>
+
+            <div align="center">
+                <p:commandButton value="Alterar" action="#{usuarioMB.alterarUsuario()}"
+                                 update=":formAlterarUsuario:msgAlterarUsuario"/>
+            </div>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalConfirmarExcluirUsuario" dynamic="true" widgetVar="dlgConfirmarExcluirUsuario"
+          header="Confirmar" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formConfirmarExcluirUsuario">
+        <p:growl id="msgConfirmarExcluirUsuario" showDetail="true"/>
+        <h:panelGrid columns="1" id="pnlConfirmarExcluirUsuario">
+            <p:outputLabel value="Deseja excluir o usuario #{usuarioMB.usuarioSelecionado.nome}?"/>
+            <p:row>
+                <div align="center">
+                    <p:commandButton value="Confirmar" action="#{usuarioMB.excluirUsuario}"/>
+                    <p:commandButton value="Cancelar" onclick="PF('dlgConfirmarExcluirUsuario').hide();"/>
+                </div>
+            </p:row>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>
