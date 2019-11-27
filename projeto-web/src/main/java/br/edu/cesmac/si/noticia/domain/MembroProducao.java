@@ -15,7 +15,7 @@ public class MembroProducao {
     @OneToOne
     @JoinColumn (name = "id_funcao")
     private FuncaoProducao funcaoProducao;
-    @ManyToMany (fetch = FetchType.EAGER)
+    @ManyToMany (fetch = FetchType.LAZY)
     private List<Filme> filmes;
 
 }

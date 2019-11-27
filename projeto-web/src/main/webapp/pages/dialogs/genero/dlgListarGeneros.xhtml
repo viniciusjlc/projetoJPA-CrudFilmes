@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
@@ -12,32 +11,24 @@
           closable="true" resizable="false" modal="true">
     <h:form id="formListarGeneros">
         <p:growl id="msgListarGeneros" showDetail="true"/>
-        <h:panelGrid columns="1" id="pnlListarGeneros" style="">
+        <h:panelGrid columns="1" id="pnlListarGeneros">
             <p:row>
                 <p:outputLabel value="Generos"/>
             </p:row>
             <ui:repeat value="#{generoMB.generos}" var="genero">
-                <p:panelGrid columns="2">
-                <p:column style="float: left;">
-                    <p:row>
-                        <p:outputLabel value="Nome: #{genero.nome}"/>
-                    </p:row>
-                    <br/>
-                    <p:row>
-                        <p:outputLabel value="Descrição: #{genero.descricao}"/>
-                    </p:row>
-                </p:column>
-                <p:column style="float: right">
-                    <p:row>
-                        b1
-                    </p:row>
-                    <p:row>
-                        b2
-                    </p:row>
-                    <p:row>
-                        b3
-                    </p:row>
-                </p:column>
+                <p:panelGrid columns="2" style="border: rgba(255,0,0,0);">
+                    <p:column style="float: left;">
+                        <p:outputLabel value="Nome: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{genero.nome}"/>
+                        <br/>
+                        <p:outputLabel value="Descrição: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{genero.descricao}"/>
+                    </p:column>
+                    <p:column style="float: right">
+                        <p:row>
+                            b1
+                        </p:row>
+                    </p:column>
                 </p:panelGrid>
             </ui:repeat>
         </h:panelGrid>

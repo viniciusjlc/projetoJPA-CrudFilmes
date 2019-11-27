@@ -17,7 +17,7 @@ public class Filme implements Serializable, Cloneable {
     @OneToOne
     @JoinColumn(name = "id_categoria")
     private Genero genero;
-    @ManyToMany (fetch = FetchType.EAGER)
+    @ManyToMany (fetch = FetchType.LAZY)
     private List<MembroProducao> membrosProducao;
 
     public Integer getId() {

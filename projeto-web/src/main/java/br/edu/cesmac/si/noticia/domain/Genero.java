@@ -13,7 +13,7 @@ public class Genero implements Serializable, Cloneable {
     private Integer id;
     private String nome;
     private String descricao;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Filme> filmes;
 
 
