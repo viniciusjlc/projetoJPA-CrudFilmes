@@ -51,10 +51,9 @@
     <h:form id="formMenu">
         <p:menubar>
             <p:menuitem value="Inicio" action="#{sessaoMB.redirecionarPrincipal()}"/>
-            <p:menuitem value="Gerenciar Usuario" action="#{sessaoMB.redirecionarUsuario()}" rendered="#{sessaoMB.permissaoModerador()}"/>
-            <p:submenu label="Teste">
-                <p:menuitem value="Cadastrar" ajax="true"/>
-                <p:menuitem value="Listar"/>
+            <p:submenu label="Gerenciar" rendered="#{sessaoMB.permissaoModerador()}">
+                <p:menuitem value="Usuarios" action="#{sessaoMB.redirecionarUsuario()}" />
+                <p:menuitem value="Generos" action="#{sessaoMB.abrirDialogListarGeneros()}" />
             </p:submenu>
 
             <f:facet name="options">

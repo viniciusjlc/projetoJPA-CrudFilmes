@@ -1,21 +1,20 @@
 package br.edu.cesmac.si.noticia.domain;
 
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 
-@Entity(name = "generos")
-public class Genero implements Serializable, Cloneable {
-
+@Entity(name = "funcao_producao")
+public class FuncaoProducao implements Serializable, Cloneable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String descricao;
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<Filme> filmes;
-
 
     public Integer getId() {
         return id;
@@ -41,28 +40,19 @@ public class Genero implements Serializable, Cloneable {
         this.descricao = descricao;
     }
 
-    public List<Filme> getFilmes() {
-        return filmes;
-    }
-
-    public void setFilmes(List<Filme> filmes) {
-        this.filmes = filmes;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Genero genero = (Genero) o;
-        return Objects.equals(id, genero.id) &&
-                Objects.equals(nome, genero.nome) &&
-                Objects.equals(descricao, genero.descricao) &&
-                Objects.equals(filmes, genero.filmes);
+        FuncaoProducao that = (FuncaoProducao) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(nome, that.nome) &&
+                Objects.equals(descricao, that.descricao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, descricao, filmes);
+        return Objects.hash(id, nome, descricao);
     }
 
     @Override

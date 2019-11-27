@@ -43,6 +43,7 @@ public interface Constantes {
         String NOME_DIALOG_CONFIRMAR_ATIVAR_USUARIO = "ConfirmarAtivarUsuario";
         String NOME_DIALOG_CONFIRMAR_EXCLUIR_USUARIO = "ConfirmarExcluirUsuario";
         String NOME_DIALOG_ALTERAR_USUARIO = "AlterarUsuario";
+        String NOME_DIALOG_LISTAR_GENERO = "ListarGeneros";
     }
 
     interface form {

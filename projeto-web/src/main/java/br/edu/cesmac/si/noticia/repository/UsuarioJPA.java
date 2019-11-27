@@ -37,9 +37,9 @@ public class UsuarioJPA {
     }
     public List<Usuario> listar() {
         EntityManager em = JpaUtil.getEntityManager();
-        List<Usuario> editorias = em.createQuery("select u from usuarios u").getResultList();
+        List<Usuario> usuarios = em.createQuery("select u from usuarios u").getResultList();
         em.close();
-        return editorias;
+        return usuarios;
     }
 
     public Boolean emailNaoUtilizado (String email) {

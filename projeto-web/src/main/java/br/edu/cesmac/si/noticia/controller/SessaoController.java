@@ -12,6 +12,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.mensagems.*;
+import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.nomeDialog.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.outros.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.pagina.*;
 import static br.edu.cesmac.si.noticia.util.VerificadorUtil.*;
@@ -57,6 +58,9 @@ public class SessaoController {
         return ModeloPerfil.ADMINISTRADOR.getCodigo()<=usuarioSessao.getIdPerfil();
     }
 
+    public void abrirDialogListarGeneros(){
+        PagesUtil.abrirDialogAtualizado(NOME_DIALOG_LISTAR_GENERO);
+    }
 
     public void controleSessao(){
         if(estaNulo(usuarioSessao)) redirecionarLogin();

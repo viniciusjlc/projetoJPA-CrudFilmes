@@ -6,6 +6,11 @@
 
 	<persistence-unit name="projetoPU">
 		<class>br.edu.cesmac.si.noticia.domain.Usuario</class>
+		<class>br.edu.cesmac.si.noticia.domain.Genero</class>
+		<class>br.edu.cesmac.si.noticia.domain.ClassificacaoIndicativa</class>
+		<class>br.edu.cesmac.si.noticia.domain.FuncaoProducao</class>
+		<class>br.edu.cesmac.si.noticia.domain.Usuario</class>
+		<class>br.edu.cesmac.si.noticia.domain.MembroProducao</class>
 		<properties>
 			<!-- Configurações das propriedades JDBC/JPA -->
 			<property name="javax.persistence.jdbc.url"

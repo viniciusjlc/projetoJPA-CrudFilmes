@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalListarGeneros" dynamic="true" widgetVar="dlgListarGeneros"
+          header="Alterar usuarioSelecionado" width="600px" height="250px"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formListarGeneros">
+        <p:growl id="msgListarGeneros" showDetail="true"/>
+        <h:panelGrid columns="1" id="pnlListarGeneros" style="">
+            <p:row>
+                <p:outputLabel value="Generos"/>
+            </p:row>
+            <ui:repeat value="#{generoMB.generos}" var="genero">
+                <p:panelGrid columns="2">
+                <p:column style="float: left;">
+                    <p:row>
+                        <p:outputLabel value="Nome: #{genero.nome}"/>
+                    </p:row>
+                    <br/>
+                    <p:row>
+                        <p:outputLabel value="Descrição: #{genero.descricao}"/>
+                    </p:row>
+                </p:column>
+                <p:column style="float: right">
+                    <p:row>
+                        b1
+                    </p:row>
+                    <p:row>
+                        b2
+                    </p:row>
+                    <p:row>
+                        b3
+                    </p:row>
+                </p:column>
+                </p:panelGrid>
+            </ui:repeat>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>
