@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalCadastrarMembroProducao" dynamic="true" widgetVar="dlgCadastrarMembroProducao"
+          header="Cadastrar Membro Produção" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formCadastrarMembroProducao">
+        <p:growl id="msgCadastrarMembroProducao" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlCadastrarMembroProducao">
+            <p:outputLabel value="Nome: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText value="#{membrosProducaoMB.membroProducao.nomeAtor}" required="true" maxlength="80"
+                         requiredMessage="Nome é um campo obrigatório!"/>
+
+            <p:outputLabel value="Genero: "/>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{membrosProducaoMB.membroProducao.funcaoProducao.id}">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems value="#{membrosProducaoMB.listaFuncaoProducao}"
+                               var="FuncaoProducao"
+                               itemLabel="#{FuncaoProducao.descricao}"
+                               itemValue="#{FuncaoProducao.codigo}"/>
+            </p:selectOneMenu>
+
+            <p:commandButton value="Cadastrar" action="#{membrosProducaoMB.cadastrar()}"
+                             update=":formCadastrarMembroProducao:msgCadastrarMembroProducao"/>
+            <p:commandButton value="Cancelar" action="#{membrosProducaoMB.fecharDialogCadastrar()}" immediate="true"/>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

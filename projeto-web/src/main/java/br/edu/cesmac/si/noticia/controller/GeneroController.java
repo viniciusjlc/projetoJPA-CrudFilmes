@@ -30,6 +30,7 @@ public class GeneroController {
 
     public void cadastrar() {
         if (generoService.cadastrar(genero)) {
+            genero = new Genero();
             MensagemUtil.sucesso("Gênero cadastrado com sucesso!");
             PagesUtil.fecharDialog("dlgCadastrarGenero");
             PagesUtil.abrirDialogAtualizado(NOME_DIALOG_LISTAR_GENERO);
@@ -38,6 +39,7 @@ public class GeneroController {
 
     public void alterar() {
         if (generoService.alterar(genero)) {
+            genero = new Genero();
             MensagemUtil.sucesso("Gênero alterado com sucesso!");
             PagesUtil.fecharDialog("dlgAlterarGenero");
             PagesUtil.abrirDialogAtualizado(NOME_DIALOG_LISTAR_GENERO);
@@ -46,6 +48,7 @@ public class GeneroController {
 
     public void excluir() {
         if (generoService.excluir(genero)) {
+            genero = new Genero();
             MensagemUtil.sucesso("Gênero excluido com sucesso!");
             PagesUtil.fecharDialog("dlgExcluirGenero");
             PagesUtil.abrirDialogAtualizado(NOME_DIALOG_LISTAR_GENERO);
@@ -70,16 +73,19 @@ public class GeneroController {
     }
 
     public void fecharDialogCadastrar(){
+        genero = new Genero();
         PagesUtil.fecharDialog("dlgCadastrarGenero");
         PagesUtil.abrirDialog("dlgListarGeneros");
     }
 
     public void fecharDialogAlterar(){
+        genero = new Genero();
         PagesUtil.fecharDialog("dlgAlterarGenero");
         PagesUtil.abrirDialog("dlgListarGeneros");
     }
 
     public void fecharDialogExcluir(){
+        genero = new Genero();
         PagesUtil.fecharDialog("dlgExcluirGenero");
         PagesUtil.abrirDialog("dlgListarGeneros");
     }

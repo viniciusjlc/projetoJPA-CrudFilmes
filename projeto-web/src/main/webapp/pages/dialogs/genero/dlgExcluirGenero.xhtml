@@ -13,13 +13,11 @@
         <p:growl id="msgExcluirGenero" showDetail="true"/>
         <h:panelGrid columns="1" id="pnlExcluirGenero">
             <p:outputLabel value="Deseja excluir o gênero #{generoMB.genero.nome}?"/>
-
             <div align="center">
                 <p:commandButton value="Excluir" action="#{generoMB.excluir()}"
                                  update=":formExcluirGenero:msgExcluirGenero"/>
                 <p:commandButton value="Cancelar" action="#{generoMB.fecharDialogExcluir()}" immediate="true"/>
             </div>
-
         </h:panelGrid>
     </h:form>
 </p:dialog>

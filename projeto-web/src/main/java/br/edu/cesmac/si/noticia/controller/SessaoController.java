@@ -62,6 +62,10 @@ public class SessaoController {
         PagesUtil.abrirDialogAtualizado(NOME_DIALOG_LISTAR_GENERO);
     }
 
+    public void abrirDialogListarMembrosProducao(){
+        PagesUtil.abrirDialogAtualizado("ListarMembrosProducao");
+    }
+
     public void controleSessao(){
         if(estaNulo(usuarioSessao)) redirecionarLogin();
     }

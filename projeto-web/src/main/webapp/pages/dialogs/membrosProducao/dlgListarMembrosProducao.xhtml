@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalListarMembrosProducao" dynamic="true" widgetVar="dlgListarMembrosProducao"
+          header="Listagem MembrosProducao" width="350px" height="250px"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formListarMembrosProducao">
+        <p:growl id="msgListarMembrosProducao" showDetail="true"/>
+        <h:panelGrid columns="1" id="pnlListarMembrosProducao">
+            <p:row>
+                <p:outputLabel value="Membros Produção"/>
+                <p:commandButton style="float: right;" immediate="true" value="Cadastrar"
+                                 actionListener="#{membrosProducaoMB.abrirDialogCadastrar()}"
+                                 rendered="#{sessaoMB.permissaoEscritor()}"/>
+            </p:row>
+            <ui:repeat value="#{membrosProducaoMB.membrosProducao}" var="membroProducao">
+                <p:panelGrid columns="2" style="border: rgba(255,0,0,0);">
+                    <p:column style="float: left; width: 70% !important;">
+                        <p:outputLabel value="Nome: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{membroProducao.nomeAtor}"/>
+                        <br/>
+                        <p:outputLabel value="Descrição: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{membroProducao.funcaoProducao.nome}"/>
+                    </p:column>
+                    <p:column style="float: right; width: 30% !important;" rendered="#{sessaoMB.permissaoEscritor()}">
+                        <p:row>
+                            <p:commandButton value="Alterar" action="#{membrosProducaoMB.abrirDialogAlterar()}">
+                                <f:setPropertyActionListener value="#{membroProducao}"
+                                                             target="#{membrosProducaoMB.membroProducao}"/>
+                            </p:commandButton>
+                            <p:commandButton value="Excluir" action="#{membrosProducaoMB.abrirDialogExcluir()}">
+                                <f:setPropertyActionListener value="#{membroProducao}"
+                                                             target="#{membrosProducaoMB.membroProducao}"/>
+                            </p:commandButton>
+                        </p:row>
+                    </p:column>
+                </p:panelGrid>
+            </ui:repeat>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>
