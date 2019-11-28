@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <meta charset="UTF-8"/>
 </h:head>
 
 <p:dialog id="modalListarGeneros" dynamic="true" widgetVar="dlgListarGeneros"
-          header="Alterar usuarioSelecionado" width="600px" height="250px"
+          header="Listagem Generos" width="600px" height="250px"
           closable="true" resizable="false" modal="true">
     <h:form id="formListarGeneros">
         <p:growl id="msgListarGeneros" showDetail="true"/>
         <h:panelGrid columns="1" id="pnlListarGeneros">
             <p:row>
                 <p:outputLabel value="Generos"/>
+                <p:commandButton style="float: right;" immediate="true" value="Cadastrar"
+                                 actionListener="#{generoMB.abrirDialogCadastrar()}"
+                                 rendered="#{sessaoMB.permissaoModerador()}"/>
             </p:row>
             <ui:repeat value="#{generoMB.generos}" var="genero">
                 <p:panelGrid columns="2" style="border: rgba(255,0,0,0);">
-                    <p:column style="float: left;">
+                    <p:column style="float: left; width: 70% !important;">
                         <p:outputLabel value="Nome: " style="color: goldenrod"/>
                         <p:outputLabel value="#{genero.nome}"/>
                         <br/>
                         <p:outputLabel value="Descrição: " style="color: goldenrod"/>
                         <p:outputLabel value="#{genero.descricao}"/>
                     </p:column>
-                    <p:column style="float: right">
+                    <p:column style="float: right; width: 30% !important;" rendered="#{sessaoMB.permissaoModerador()}">
                         <p:row>
-                            b1
+                            <p:commandButton value="Alterar" action="#{generoMB.abrirDialogAlterar()}">
+                                <f:setPropertyActionListener value="#{genero}" target="#{generoMB.genero}"/>
+                            </p:commandButton>
+                            <p:commandButton value="Excluir" action="#{generoMB.abrirDialogExcluir()}">
+                                <f:setPropertyActionListener value="#{genero}" target="#{generoMB.genero}"/>
+                            </p:commandButton>
                         </p:row>
                     </p:column>
                 </p:panelGrid>

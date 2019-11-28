@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalExcluirGenero" dynamic="true" widgetVar="dlgExcluirGenero"
+          header="Excluir Gênero" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formExcluirGenero">
+        <p:growl id="msgExcluirGenero" showDetail="true"/>
+        <h:panelGrid columns="1" id="pnlExcluirGenero">
+            <p:outputLabel value="Deseja excluir o gênero #{generoMB.genero.nome}?"/>
+
+            <div align="center">
+                <p:commandButton value="Excluir" action="#{generoMB.excluir()}"
+                                 update=":formExcluirGenero:msgExcluirGenero"/>
+                <p:commandButton value="Cancelar" action="#{generoMB.fecharDialogExcluir()}" immediate="true"/>
+            </div>
+
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

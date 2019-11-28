@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalAlterarGenero" dynamic="true" widgetVar="dlgAlterarGenero"
+          header="Alterar Gênero" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formAlterarGenero">
+        <p:growl id="msgAlterarGenero" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlAlterarGenero">
+            <p:outputLabel value="Nome: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText value="#{generoMB.genero.nome}" required="true" maxlength="80"
+                         requiredMessage="Nome é um campo obrigatório!"/>
+            <p:outputLabel value="Descrição: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputTextarea value="#{generoMB.genero.descricao}" required="true" maxlength="1000"
+                             requiredMessage="Descrição é um campo obrigatório!"/>
+
+            <p:commandButton value="Alterar" action="#{generoMB.alterar()}"
+                             update=":formAlterarGenero:msgAlterarGenero"/>
+            <p:commandButton value="Cancelar" action="#{generoMB.fecharDialogAlterar()}" immediate="true"/>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

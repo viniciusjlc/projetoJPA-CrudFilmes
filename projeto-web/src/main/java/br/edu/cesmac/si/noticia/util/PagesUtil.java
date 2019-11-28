@@ -28,10 +28,10 @@ public class PagesUtil {
 
     public static void abrirDialogAtualizado(String nomeDialog){
         atualizarComponente(FORM+nomeDialog);
-        abirDialog(DLG+nomeDialog);
+        abrirDialog(DLG+nomeDialog);
     }
 
-    public static void abirDialog(String dialog) {
+    public static void abrirDialog(String dialog) {
         getRequestContext().execute("PF('" + dialog + "').show();");
     }
 

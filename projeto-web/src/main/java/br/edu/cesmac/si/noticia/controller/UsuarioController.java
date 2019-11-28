@@ -77,7 +77,7 @@ public class UsuarioController {
     }
 
     public void abrirDialogSenha(){
-        PagesUtil.abirDialog(DIALOG_CADASTRAR_SENHA);
+        PagesUtil.abrirDialog(DIALOG_CADASTRAR_SENHA);
     }
 
     public void abrirDialogConfirmarInativarUsuario(){
