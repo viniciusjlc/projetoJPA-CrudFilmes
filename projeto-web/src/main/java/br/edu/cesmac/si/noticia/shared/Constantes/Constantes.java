@@ -26,6 +26,7 @@ public interface Constantes {
     interface outros {
         String USUARIO_DA_SESSAO = "user_session";
         String FORM = "form";
+        String FORM_FILME = "formFilme";
         String DLG = "dlg";
     }
 
@@ -58,6 +59,7 @@ public interface Constantes {
         String PAGINA_PRINCPAL = "principal";
         String PAGINA_LOGIN = "login";
         String PAGINA_USUARIOS = "usuarios";
+        String PAGINA_FILMES= "filmes";
     }
 
 }

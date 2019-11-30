@@ -6,12 +6,12 @@
     <meta charset="UTF-8"/>
 </h:head>
 
-<p:dialog id="modalCadastrarGenero" dynamic="true" widgetVar="dlgCadastrarGenero"
-          header="Cadastrar Gênero" width="auto" height="auto"
+<p:dialog id="modalAlterarGenero" dynamic="true" widgetVar="dlgAlterarGenero"
+          header="Alterar Gênero" width="auto" height="auto"
           closable="false" resizable="false" modal="true">
-    <h:form id="formCadastrarGenero">
-        <p:growl id="msgCadastrarGenero" showDetail="true"/>
-        <h:panelGrid columns="2" id="pnlCadastrarGenero">
+    <h:form id="formAlterarGenero">
+        <p:growl id="msgAlterarGenero" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlAlterarGenero">
             <p:outputLabel value="Nome: ">
                 <span style="color: red;">*</span>
             </p:outputLabel>
@@ -21,11 +21,11 @@
                 <span style="color: red;">*</span>
             </p:outputLabel>
             <p:inputTextarea value="#{generoMB.genero.descricao}" required="true" maxlength="1000"
-                             requiredMessage="Descrição é um campo obrigatório!"/>
+                             requiredMessage="Descrição é um campo obrigatório!" autoResize="true"/>
 
-            <p:commandButton value="Cadastrar" action="#{generoMB.cadastrar()}"
-                             update=":formCadastrarGenero:msgCadastrarGenero"/>
-            <p:commandButton value="Cancelar" action="#{generoMB.fecharDialogCadastrar()}" immediate="true"/>
+            <p:commandButton value="Alterar" action="#{generoMB.alterar()}"
+                             update=":formAlterarGenero:msgAlterarGenero"/>
+            <p:commandButton value="Cancelar" action="#{generoMB.fecharDialogAlterar()}" immediate="true"/>
         </h:panelGrid>
     </h:form>
 </p:dialog>

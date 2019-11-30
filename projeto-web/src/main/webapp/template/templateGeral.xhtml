@@ -56,6 +56,7 @@
                 <p:menuitem value="Generos" action="#{sessaoMB.abrirDialogListarGeneros()}" />
             </p:submenu>
             <p:menuitem value="Atores e Produção" action="#{sessaoMB.abrirDialogListarMembrosProducao()}" />
+            <p:menuitem value="Filmes" action="#{sessaoMB.redirecionarFilmes()}" />
 
             <f:facet name="options">
                 <p:outputLabel style="margin-right: 5px !important;"
@@ -69,5 +70,17 @@
     <div>
         <ui:insert name="conteudo"/>
     </div>
+    <ui:include src="dialogs/genero/dlgListarGeneros.xhtml"/>
+    <ui:include src="dialogs/genero/dlgCadastrarGenero.xhtml"/>
+    <ui:include src="dialogs/genero/dlgAlterarGenero.xhtml"/>
+    <ui:include src="dialogs/genero/dlgExcluirGenero.xhtml"/>
+    <ui:include src="dialogs/membrosProducao/dlgListarMembrosProducao.xhtml"/>
+    <ui:include src="dialogs/membrosProducao/dlgCadastrarMembroProducao.xhtml"/>
+    <ui:include src="dialogs/membrosProducao/dlgAlterarMembroProducao.xhtml"/>
+    <ui:include src="dialogs/membrosProducao/dlgExcluirMembroProducao.xhtml"/>
+    <ui:include src="dialogs/filme/dlgCadastrarFilme.xhtml"/>
+    <ui:include src="dialogs/filme/dlgAlterarFilme.xhtml"/>
+    <ui:include src="dialogs/filme/dlgExcluirFilme.xhtml"/>
+    <ui:include src="dialogs/filme/dlgVisualizarProducao.xhtml"/>
 </h:body>
 </html>

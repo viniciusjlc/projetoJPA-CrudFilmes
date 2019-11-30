@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalAlterarFilme" dynamic="true" widgetVar="dlgAlterarFilme"
+          header="Alterar Filme" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formAlterarFilme">
+        <p:growl id="msgAlterarFilme" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlAlterarFilme">
+            <p:outputLabel value="Nome: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputText value="#{filmeMB.filme.nome}" required="true" maxlength="80"
+                         requiredMessage="Nome é um campo obrigatório!"/>
+            <p:outputLabel value="Sinopse: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:inputTextarea value="#{filmeMB.filme.sinopse}" maxlength="1000" required="true" cols="70"
+                             requiredMessage="Sinopse é um campo obrigatório!" autoResize="true"/>
+
+            <p:outputLabel value="Gênero: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{filmeMB.filme.genero.id}" required="true"
+                             requiredMessage="Gênero é um campo obrigatório!">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems value="#{generoMB.generos}"
+                               var="genero" itemLabel="#{genero.nome}" itemValue="#{genero.id}"/>
+            </p:selectOneMenu>
+
+            <p:outputLabel value="Classificação Indicativa: ">
+                <span style="color: red;">*</span>
+            </p:outputLabel>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{filmeMB.filme.classificacaoIndicativa.id}"
+                             required="true" requiredMessage="Classificação Indicativa é um campo obrigatório!">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems value="#{filmeMB.classificacoesIndicativas}"
+                               var="classificacaoIndicativa" itemLabel="#{classificacaoIndicativa.descricaoResumida}"
+                               itemValue="#{classificacaoIndicativa.codigo}"/>
+            </p:selectOneMenu>
+
+            <p:commandButton value="Alterar" action="#{filmeMB.alterar()}"
+                             update=":formAlterarFilme:msgAlterarFilme"/>
+            <p:commandButton value="Cancelar" action="#{filmeMB.fecharDialogAlterar()}" immediate="true"/>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

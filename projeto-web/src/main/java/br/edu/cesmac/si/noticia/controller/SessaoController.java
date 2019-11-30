@@ -82,6 +82,11 @@ public class SessaoController {
         PagesUtil.redirectPage(PAGINA_USUARIOS);
     }
 
+
+    public void redirecionarFilmes() {
+        PagesUtil.redirectPage(PAGINA_FILMES);
+    }
+
     public ParametrosLoginDTO getParametrosLoginDTO() {
         return parametrosLoginDTO;
     }

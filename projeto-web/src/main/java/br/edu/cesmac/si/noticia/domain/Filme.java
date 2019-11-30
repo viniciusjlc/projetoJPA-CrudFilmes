@@ -2,6 +2,7 @@ package br.edu.cesmac.si.noticia.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,6 +12,7 @@ public class Filme implements Serializable, Cloneable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+    private String sinopse;
     @OneToOne
     @JoinColumn(name = "id_classificacao_indicativa")
     private ClassificacaoIndicativa classificacaoIndicativa;
@@ -19,6 +21,12 @@ public class Filme implements Serializable, Cloneable {
     private Genero genero;
     @ManyToMany (fetch = FetchType.LAZY)
     private List<MembroProducao> membrosProducao;
+
+    public Filme() {
+        this.classificacaoIndicativa = new ClassificacaoIndicativa();
+        this.genero = new Genero();
+        this.membrosProducao = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;
@@ -60,6 +68,14 @@ public class Filme implements Serializable, Cloneable {
         this.membrosProducao = membrosProducao;
     }
 
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,6 +83,7 @@ public class Filme implements Serializable, Cloneable {
         Filme filme = (Filme) o;
         return Objects.equals(id, filme.id) &&
                 Objects.equals(nome, filme.nome) &&
+                Objects.equals(sinopse, filme.sinopse) &&
                 Objects.equals(classificacaoIndicativa, filme.classificacaoIndicativa) &&
                 Objects.equals(genero, filme.genero) &&
                 Objects.equals(membrosProducao, filme.membrosProducao);
@@ -74,7 +91,7 @@ public class Filme implements Serializable, Cloneable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, classificacaoIndicativa, genero, membrosProducao);
+        return Objects.hash(id, nome, sinopse, classificacaoIndicativa, genero, membrosProducao);
     }
 
     @Override

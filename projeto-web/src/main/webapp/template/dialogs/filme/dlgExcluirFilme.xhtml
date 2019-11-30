@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalExcluirFilme" dynamic="true" widgetVar="dlgExcluirFilme"
+          header="Excluir Membro Produção" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formExcluirFilme">
+        <p:growl id="msgExcluirFilme" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlExcluirFilme">
+            <p:outputLabel value="Deseja excluir o filme #{filmeMB.filme.nome}?"/>
+            <div align="center">
+                <p:commandButton value="Excluir" action="#{filmeMB.excluir()}"
+                                 update=":formExcluirGenero:msgExcluirGenero"/>
+                <p:commandButton value="Cancelar" action="#{filmeMB.fecharDialogExcluir()}" immediate="true"/>
+            </div>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

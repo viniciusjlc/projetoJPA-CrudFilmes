@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<ui:composition template="/template/templateGeral.xhtml">
+    <ui:define name="title">
+    </ui:define>
+    <ui:define name="conteudo">
+        <h:form id="formFilme">
+            <p:growl id="msgFilme" showDetail="true"/>
+            <p:outputLabel value="Filmes:" style="font-size: 30px;"/>
+            <p:commandButton value="Cadastrar" action="#{filmeMB.abrirDialogCadastrar()}" style="float: right;"/>
+            <ui:repeat value="#{filmeMB.filmes}" var="filme">
+                <p:panelGrid columns="2" style="border: rgba(255,0,0,0);">
+                    <p:column style="float: left; width: 70% !important;">
+                        <p:outputLabel value="Nome: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{filme.nome}"/>
+                        <br/>
+                        <p:outputLabel value="Gênero: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{filme.genero.nome}"/>
+                        <br/>
+                        <p:outputLabel value="Classificação Indicativa: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{filme.classificacaoIndicativa.descricaoResumida}"/>
+                        <br/>
+                        <p:outputLabel value="Sinopse: " style="color: goldenrod"/>
+                        <p:outputLabel value="#{filme.sinopse}"/>
+                    </p:column>
+                    <p:column style="float: right; width: 30% !important;" rendered="#{sessaoMB.permissaoModerador()}">
+                        <p:row>
+                            <p:commandButton value="Alterar" action="#{filmeMB.abrirDialogAlterar()}">
+                                <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
+                            </p:commandButton>
+                            <p:commandButton value="Excluir" action="#{filmeMB.abrirDialogExcluir()}">
+                                <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
+                            </p:commandButton>
+
+                            <p:commandButton value="Visualizar Produção" action="#{filmeMB.abrirDialogVisualizarProducao()}">
+                                <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
+                            </p:commandButton>
+                        </p:row>
+                    </p:column>
+                </p:panelGrid>
+            </ui:repeat>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

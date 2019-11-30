@@ -18,7 +18,7 @@
             <p:inputText value="#{membrosProducaoMB.membroProducao.nomeAtor}" required="true" maxlength="80"
                          requiredMessage="Nome é um campo obrigatório!"/>
 
-            <p:outputLabel value="Genero: "/>
+            <p:outputLabel value="Função: "/>
             <p:selectOneMenu filterMatchMode="startsWith" value="#{membrosProducaoMB.membroProducao.funcaoProducao.id}">
                 <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
                 <f:selectItems value="#{membrosProducaoMB.listaFuncaoProducao}"

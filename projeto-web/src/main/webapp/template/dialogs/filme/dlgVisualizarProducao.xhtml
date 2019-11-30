@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+>
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalVisualizarProducao" dynamic="true" widgetVar="dlgVisualizarProducao"
+          header="Listagem MembrosProducao" width="350px" height="250px"
+          closable="true" resizable="false" modal="true">
+    <h:form id="formVisualizarProducao">
+        <p:growl id="msgVisualizarProducao" showDetail="true"/>
+        <h:panelGrid columns="2" id="pnlVisualizarProducao">
+            <div align="center">
+                <p:outputLabel value="Membros do Filme #{filmeMB.filme.nome}"/>
+            </div>
+            <div align="center">
+                <p:outputLabel value="Membros de Produções"/>
+            </div>
+            <p:dataTable value="#{filmeMB.filme.membrosProducao}" var="membroProducaoFilme" id="membrosFilme">
+                <p:outputLabel value="#{membroProducaoFilme.nomeAtor}"/>
+                <br/>
+                <p:outputLabel value="#{membroProducaoFilme.funcaoProducao.nome}"/>
+            </p:dataTable>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>
