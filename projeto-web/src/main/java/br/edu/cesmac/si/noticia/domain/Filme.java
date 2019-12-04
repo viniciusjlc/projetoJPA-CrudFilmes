@@ -1,5 +1,10 @@
 package br.edu.cesmac.si.noticia.domain;
 
+import br.edu.cesmac.si.noticia.repository.FilmeJPA;
+import br.edu.cesmac.si.noticia.util.VerificadorUtil;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,7 +24,11 @@ public class Filme implements Serializable, Cloneable {
     @OneToOne
     @JoinColumn(name = "id_categoria")
     private Genero genero;
-    @ManyToMany (fetch = FetchType.LAZY)
+    @Fetch(FetchMode.SUBSELECT)
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "membros_filme", joinColumns = {
+            @JoinColumn(name = "id_filme", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "id_membro", referencedColumnName = "id")})
     private List<MembroProducao> membrosProducao;
 
     public Filme() {
@@ -76,26 +85,5 @@ public class Filme implements Serializable, Cloneable {
         this.sinopse = sinopse;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Filme filme = (Filme) o;
-        return Objects.equals(id, filme.id) &&
-                Objects.equals(nome, filme.nome) &&
-                Objects.equals(sinopse, filme.sinopse) &&
-                Objects.equals(classificacaoIndicativa, filme.classificacaoIndicativa) &&
-                Objects.equals(genero, filme.genero) &&
-                Objects.equals(membrosProducao, filme.membrosProducao);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nome, sinopse, classificacaoIndicativa, genero, membrosProducao);
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 }

@@ -8,7 +8,7 @@
 </h:head>
 
 <p:dialog id="modalListarMembrosProducao" dynamic="true" widgetVar="dlgListarMembrosProducao"
-          header="Listagem MembrosProducao" width="350px" height="250px"
+          header="Listagem Membros Produção" width="500px" height="250px"
           closable="true" resizable="false" modal="true">
     <h:form id="formListarMembrosProducao">
         <p:growl id="msgListarMembrosProducao" showDetail="true"/>
@@ -19,29 +19,27 @@
                                  actionListener="#{membrosProducaoMB.abrirDialogCadastrar()}"
                                  rendered="#{sessaoMB.permissaoEscritor()}"/>
             </p:row>
-            <ui:repeat value="#{membrosProducaoMB.membrosProducao}" var="membroProducao">
-                <p:panelGrid columns="2" style="border: rgba(255,0,0,0);">
-                    <p:column style="float: left; width: 70% !important;">
-                        <p:outputLabel value="Nome: " style="color: goldenrod"/>
-                        <p:outputLabel value="#{membroProducao.nomeAtor}"/>
-                        <br/>
-                        <p:outputLabel value="Descrição: " style="color: goldenrod"/>
-                        <p:outputLabel value="#{membroProducao.funcaoProducao.nome}"/>
-                    </p:column>
-                    <p:column style="float: right; width: 30% !important;" rendered="#{sessaoMB.permissaoEscritor()}">
-                        <p:row>
-                            <p:commandButton value="Alterar" action="#{membrosProducaoMB.abrirDialogAlterar()}">
-                                <f:setPropertyActionListener value="#{membroProducao}"
-                                                             target="#{membrosProducaoMB.membroProducao}"/>
-                            </p:commandButton>
-                            <p:commandButton value="Excluir" action="#{membrosProducaoMB.abrirDialogExcluir()}">
-                                <f:setPropertyActionListener value="#{membroProducao}"
-                                                             target="#{membrosProducaoMB.membroProducao}"/>
-                            </p:commandButton>
-                        </p:row>
-                    </p:column>
-                </p:panelGrid>
-            </ui:repeat>
+            <p:dataTable value="#{membrosProducaoMB.membrosProducao}" var="membroProducao">
+                <p:column >
+                    <p:outputLabel value="Nome: " style="color: goldenrod"/>
+                    <p:outputLabel value="#{membroProducao.nomeAtor}"/>
+                    <br/>
+                    <p:outputLabel value="Descrição: " style="color: goldenrod"/>
+                    <p:outputLabel value="#{membroProducao.funcaoProducao.nome}"/>
+                </p:column>
+                <p:column rendered="#{sessaoMB.permissaoEscritor()}">
+                    <p:row>
+                        <p:commandButton value="Alterar" action="#{membrosProducaoMB.abrirDialogAlterar()}">
+                            <f:setPropertyActionListener value="#{membroProducao}"
+                                                         target="#{membrosProducaoMB.membroProducao}"/>
+                        </p:commandButton>
+                        <p:commandButton value="Excluir" action="#{membrosProducaoMB.abrirDialogExcluir()}">
+                            <f:setPropertyActionListener value="#{membroProducao}"
+                                                         target="#{membrosProducaoMB.membroProducao}"/>
+                        </p:commandButton>
+                    </p:row>
+                </p:column>
+            </p:dataTable>
         </h:panelGrid>
     </h:form>
 </p:dialog>

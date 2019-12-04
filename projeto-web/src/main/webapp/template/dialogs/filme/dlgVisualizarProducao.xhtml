@@ -8,22 +8,46 @@
 </h:head>
 
 <p:dialog id="modalVisualizarProducao" dynamic="true" widgetVar="dlgVisualizarProducao"
-          header="Listagem MembrosProducao" width="350px" height="250px"
+          header="Listagem MembrosProducao" width="1000px" height="400px"
           closable="true" resizable="false" modal="true">
     <h:form id="formVisualizarProducao">
         <p:growl id="msgVisualizarProducao" showDetail="true"/>
         <h:panelGrid columns="2" id="pnlVisualizarProducao">
-            <div align="center">
-                <p:outputLabel value="Membros do Filme #{filmeMB.filme.nome}"/>
-            </div>
-            <div align="center">
-                <p:outputLabel value="Membros de Produções"/>
-            </div>
-            <p:dataTable value="#{filmeMB.filme.membrosProducao}" var="membroProducaoFilme" id="membrosFilme">
-                <p:outputLabel value="#{membroProducaoFilme.nomeAtor}"/>
-                <br/>
-                <p:outputLabel value="#{membroProducaoFilme.funcaoProducao.nome}"/>
+            <p:outputLabel value="Membros do Filme #{filmeMB.filme.nome}"/>
+            <p:outputLabel value="Membros de Produções"/>
+            <p:dataTable value="#{filmeMB.filme.membrosProducao}" var="membroProducaoFilme" id="membrosFilme"
+                         emptyMessage="Nenhum ator Encontrado para Esse filme">
+                <p:column headerText="Nome do Ator">
+                    <p:outputLabel value="#{membroProducaoFilme.nomeAtor}"/>
+                </p:column>
+                <p:column headerText="Função na Produção">
+                    <p:outputLabel value="#{membroProducaoFilme.funcaoProducao.nome}"/>
+                </p:column>
+                <p:column>
+                    <p:commandButton value="Retirar" immediate="true"
+                                     actionListener="#{filmeMB.retirarMembroFilme(membroProducaoFilme)}"
+                                     update=":formVisualizarProducao:membrosFilme, :formVisualizarProducao:membrosOutros"/>
+                </p:column>
             </p:dataTable>
+            <p:dataTable value="#{filmeMB.listaOutrosMembros}" var="membroProducaoOutros" id="membrosOutros"
+                         emptyMessage="Nenhum ator Encontrado para Esse filme">
+                <p:column headerText="Nome do Ator">
+                    <p:outputLabel value="#{membroProducaoOutros.nomeAtor}"/>
+                </p:column>
+                <p:column headerText="Função na Produção">
+                    <p:outputLabel value="#{membroProducaoOutros.funcaoProducao.nome}"/>
+                </p:column>
+                <p:column>
+                    <p:commandButton value="Adicionar" immediate="true"
+                                     actionListener="#{filmeMB.adicionarMembroFilme(membroProducaoOutros)}"
+                                     update=":formVisualizarProducao:membrosFilme, :formVisualizarProducao:membrosOutros"/>
+                </p:column>
+            </p:dataTable>
+            <p:commandButton value="Gravar" action="#{filmeMB.atualizarElenco()}"
+                             style="color: goldenrod"
+                             update=":formVisualizarProducao:msgVisualizarProducao"/>
+            <p:commandButton value="Cancelar" action="#{filmeMB.fecharDialogVisualizarProducao()}"
+                             style="float: right"/>
         </h:panelGrid>
     </h:form>
 </p:dialog>

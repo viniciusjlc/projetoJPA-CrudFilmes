@@ -2,14 +2,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/template/templateGeral.xhtml">
     <ui:define name="title">
         Tela Principal
     </ui:define>
     <ui:define name="conteudo">
-
+        <div align="center" style="margin-top: 20px">
+            <p:outputLabel value="Casa dos Filmes" style="font-size: 2em; font-family: auto;"/>
+            <p:galleria value="#{sessaoMB.images}" var="image" panelWidth="500" panelHeight="400"
+                        style="text-align: center;">
+                <p:graphicImage url="../resources/img/#{image}" style="width: 60%; height: 100%;"/>
+            </p:galleria>
+            <div id="textos" align="center" style="margin-top: 10px">
+                <p:outputLabel style="font-size: 1.5em; font-family: auto;">
+                    "O cinema não tem fronteiras nem limites. É um fluxo constante de sonho...", Orson Welles
+                </p:outputLabel>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
 </html>

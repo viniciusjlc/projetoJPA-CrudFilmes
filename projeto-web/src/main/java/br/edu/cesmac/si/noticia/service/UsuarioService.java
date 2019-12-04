@@ -21,6 +21,8 @@ public class UsuarioService {
     public void cadastrar(Usuario usuario){
         usuario.setIdPerfil(ModeloPerfil.LEITOR.getCodigo());
         try{
+            retirarMascaras(usuario);
+            usuario.setAtivo(true);
             usuarioJPA.cadastrar(usuario);
             MensagemUtil.sucesso(MENSAGEM_SUCESSO_CADASTRAR_USUARIO);
         }catch (Exception e){
@@ -28,8 +30,14 @@ public class UsuarioService {
         }
     }
 
+    private void retirarMascaras(Usuario usuario) {
+        usuario.setCelular(usuario.getCelular().replaceAll("[.-]", ""));
+        usuario.setCpf(usuario.getCpf().replaceAll("[.-]", ""));
+    }
+
     public boolean alterar(Usuario usuario){
         try{
+            retirarMascaras(usuario);
             usuarioJPA.alterar(usuario);
             return true;
         }catch (Exception e){

@@ -1,10 +1,12 @@
 package br.edu.cesmac.si.noticia.controller;
 
 import br.edu.cesmac.si.noticia.domain.Filme;
+import br.edu.cesmac.si.noticia.domain.MembroProducao;
 import br.edu.cesmac.si.noticia.enums.ModeloClassificacoesIndicativas;
 import br.edu.cesmac.si.noticia.service.FilmeService;
 import br.edu.cesmac.si.noticia.util.MensagemUtil;
 import br.edu.cesmac.si.noticia.util.PagesUtil;
+import br.edu.cesmac.si.noticia.util.VerificadorUtil;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -20,40 +22,51 @@ public class FilmeController {
     private FilmeService filmeService;
     private List<Filme> filmes = new ArrayList<>();
     private Filme filme;
+    private List<MembroProducao> listaOutrosMembros;
+    private MembroProducao membroProducao;
 
     public FilmeController() {
         this.filmeService = new FilmeService();
         this.filme = new Filme();
+        this.listaOutrosMembros = null;
     }
 
     public List<Filme> getFilmes() {
         return (!filmes.isEmpty()) ? filmes : filmeService.listar();
     }
 
+    public List<MembroProducao> getListaOutrosMembros() {
+        if (VerificadorUtil.estaNulo(listaOutrosMembros)) {
+            listaOutrosMembros = filmeService.listarMembrosProducaoNaoFilme(filme.getMembrosProducao());
+        }
+        return listaOutrosMembros;
+    }
+
     public void cadastrar() {
         if (filmeService.cadastrar(filme)) {
-            filme = new Filme();
             MensagemUtil.sucesso("Filme cadastrado com sucesso!");
-            PagesUtil.fecharDialog("dlgCadastrarFilme");
-            PagesUtil.atualizarComponente(FORM_FILME);
+            fecharDialogCadastrar();
         }
     }
 
     public void alterar() {
         if (filmeService.alterar(filme)) {
-            filme = new Filme();
             MensagemUtil.sucesso("Filme alterado com sucesso!");
-            PagesUtil.fecharDialog("dlgAlterarFilme");
-            PagesUtil.atualizarComponente(FORM_FILME);
+            fecharDialogAlterar();
         }
     }
 
     public void excluir() {
         if (filmeService.excluir(filme)) {
-            filme = new Filme();
             MensagemUtil.sucesso("Filme excluido com sucesso!");
-            PagesUtil.fecharDialog("dlgExcluirFilme");
-            PagesUtil.atualizarComponente(FORM_FILME);
+            fecharDialogExcluir();
+        }
+    }
+
+    public void atualizarElenco(){
+        if(filmeService.alterar(filme)){
+            MensagemUtil.sucesso("Elenco atualizado com sucesso!");
+            fecharDialogVisualizarProducao();
         }
     }
 
@@ -76,6 +89,7 @@ public class FilmeController {
     }
 
     public void abrirDialogVisualizarProducao() {
+        listaOutrosMembros = filmeService.listarMembrosProducaoNaoFilme(filme.getMembrosProducao());
         PagesUtil.abrirDialogAtualizado("VisualizarProducao");
     }
 
@@ -99,8 +113,18 @@ public class FilmeController {
 
     public void fecharDialogVisualizarProducao() {
         filme = new Filme();
-        PagesUtil.fecharDialog("dlgVisualizarFilmeProducao");
+        PagesUtil.fecharDialog("dlgVisualizarProducao");
         PagesUtil.atualizarComponente(FORM_FILME);
+    }
+
+    public void adicionarMembroFilme(MembroProducao membroProducao) {
+        filme.getMembrosProducao().add(membroProducao);
+        listaOutrosMembros.remove(membroProducao);
+    }
+
+    public void retirarMembroFilme(MembroProducao membroProducao) {
+        listaOutrosMembros.add(membroProducao);
+        filme.getMembrosProducao().remove(membroProducao);
     }
 
     public Filme getFilme() {
@@ -111,4 +135,7 @@ public class FilmeController {
         this.filme = filme;
     }
 
+    public Double getNota(){
+        return filmeService.retornarNota(filme.getId());
+    }
 }

@@ -1,7 +1,9 @@
 package br.edu.cesmac.si.noticia.service;
 
 import br.edu.cesmac.si.noticia.domain.Filme;
+import br.edu.cesmac.si.noticia.domain.MembroProducao;
 import br.edu.cesmac.si.noticia.repository.FilmeJPA;
+import br.edu.cesmac.si.noticia.repository.MembrosProducaoJPA;
 import br.edu.cesmac.si.noticia.util.MensagemUtil;
 
 import java.util.List;
@@ -47,5 +49,11 @@ public class FilmeService {
         }
     }
 
+    public List<MembroProducao> listarMembrosProducaoNaoFilme(List<MembroProducao> listaMembrosFilme){
+        return new MembrosProducaoJPA().listarMembrosForaFilme(listaMembrosFilme);
+    }
 
+    public Double retornarNota(Integer idFilme){
+        return filmeJPA.retornarNota(idFilme);
+    }
 }

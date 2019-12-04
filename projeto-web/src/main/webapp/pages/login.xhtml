@@ -7,18 +7,25 @@
     <meta charset="UTF-8"/>
     <title>Login</title>
 </h:head>
-<h:body>
+<h:body style="background: url('../resources/img/bg.jpg'); background-size: 100%;">
     <div align="center">
         <h:form id="formLogin">
             <p:growl id="msg" showDetail="true"/>
-            <h:panelGrid columns="1" style="margin-top: 20px" id="painel" cellspacing="10px">
-                <p:inputText placeholder="EMAIL" value="#{sessaoMB.parametrosLoginDTO.email}"
-                             required="true" requiredMessage="Por favor informe o email!"/>
-                <p:inputText type="password" placeholder="SENHA" value="#{sessaoMB.parametrosLoginDTO.senha}"
-                             required="true" requiredMessage="Por favor informe a senha!"/>
-                <p:commandButton value="Logar" update="msg" action="#{sessaoMB.verificarUsuario()}"/>
-                <p:commandButton value="Cadastrar-se" onclick="PF('dlgCadastrarUsuario').show();"/>
-            </h:panelGrid>
+            <div align="center"
+                 style="background-color: goldenrod; border-color: darkgoldenrod;
+                 width: 19%; margin-top: 10%; border-radius: 5%; border-style: inset; border-width: thick;">
+                <p:outputLabel value="Casa dos Filmes" style="font-size: 1.8em; font-family: auto;"/>
+                <h:panelGrid columns="1" id="painel" cellspacing="10px">
+                    <p:inputText placeholder="EMAIL" value="#{sessaoMB.parametrosLoginDTO.email}"
+                                 required="true" requiredMessage="Por favor informe o email!"/>
+                    <p:inputText type="password" placeholder="SENHA" value="#{sessaoMB.parametrosLoginDTO.senha}"
+                                 required="true" requiredMessage="Por favor informe a senha!"/>
+                    <p:commandButton value="Logar" update="msg" action="#{sessaoMB.verificarUsuario()}"
+                                     style="width: 100%;"/>
+                    <p:commandButton value="Cadastrar-se" onclick="PF('dlgCadastrarUsuario').show();"
+                                     style="width: 100%;"/>
+                </h:panelGrid>
+            </div>
         </h:form>
     </div>
 </h:body>

@@ -4,6 +4,7 @@ import br.edu.cesmac.si.noticia.JPA.JpaUtil;
 import br.edu.cesmac.si.noticia.domain.MembroProducao;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MembrosProducaoJPA {
@@ -36,6 +37,28 @@ public class MembrosProducaoJPA {
         List<MembroProducao> membrosProducao = em.createQuery("select mp from membros_producao mp").getResultList();
         em.close();
         return membrosProducao;
+    }
+
+    public List<MembroProducao> listarMembrosForaFilme(List<MembroProducao> listaMembrosFilme) {
+        EntityManager em = JpaUtil.getEntityManager();
+        List<MembroProducao> listaLocalMembrosProducao = em.createQuery("select mp from membros_producao mp").getResultList();
+        em.close();
+        List<MembroProducao> listaDefinitivaMembrosProducao = new ArrayList<>();
+        for (MembroProducao mp : listaLocalMembrosProducao){
+            if(naoContemMembro(listaMembrosFilme, mp)){
+                listaDefinitivaMembrosProducao.add(mp);
+            }
+        }
+        return listaDefinitivaMembrosProducao;
+    }
+
+    private Boolean naoContemMembro(List<MembroProducao> listaMembrosFilme, MembroProducao membroProducao){
+        for (MembroProducao mf : listaMembrosFilme){
+            if(mf.getId().equals(membroProducao.getId())){
+                return false;
+            }
+        }
+        return true;
     }
 
 }

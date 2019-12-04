@@ -15,7 +15,7 @@
             <p:outputLabel value="Deseja excluir o filme #{filmeMB.filme.nome}?"/>
             <div align="center">
                 <p:commandButton value="Excluir" action="#{filmeMB.excluir()}"
-                                 update=":formExcluirGenero:msgExcluirGenero"/>
+                                 update=":formExcluirFilme:msgExcluirFilme"/>
                 <p:commandButton value="Cancelar" action="#{filmeMB.fecharDialogExcluir()}" immediate="true"/>
             </div>
         </h:panelGrid>

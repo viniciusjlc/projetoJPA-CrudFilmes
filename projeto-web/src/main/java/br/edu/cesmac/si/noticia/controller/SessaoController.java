@@ -11,6 +11,9 @@ import br.edu.cesmac.si.noticia.util.SessaoUtil;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.mensagems.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.nomeDialog.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.outros.*;
@@ -23,9 +26,24 @@ import static br.edu.cesmac.si.noticia.util.SessaoUtil.*;
 public class SessaoController {
     private ParametrosLoginDTO parametrosLoginDTO;
     private Usuario usuarioSessao = retornarUsuarioDaSessao();
+    private List<String> images = new ArrayList<>();
 
     public SessaoController() {
         this.parametrosLoginDTO = new ParametrosLoginDTO();
+    }
+
+    private void init() {
+        images = new ArrayList<String>();
+        for (int i = 1; i <= 8; i++) {
+            images.add("filme" + i + ".jpg");
+        }
+    }
+
+    public List<String> getImages() {
+        if(images.isEmpty()){
+            init();
+        }
+        return images;
     }
 
     public void sair(){
@@ -50,7 +68,8 @@ public class SessaoController {
     }
 
     public Boolean permissaoModerador(){
-        controleSessao();return ModeloPerfil.MODERADOR.getCodigo()<=usuarioSessao.getIdPerfil();
+        controleSessao();
+        return ModeloPerfil.MODERADOR.getCodigo()<=usuarioSessao.getIdPerfil();
     }
 
     public Boolean permissaoAdministrador(){

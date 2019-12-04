@@ -17,10 +17,11 @@ import java.util.Date;
 import java.util.List;
 
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.dialogs.*;
-import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.form.FORM_USUARIOS;
+import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.form.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.mensagems.*;
 import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.nomeDialog.*;
-import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.outros.USUARIO_DA_SESSAO;
+import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.outros.*;
+import static br.edu.cesmac.si.noticia.shared.Constantes.Constantes.pagina.*;
 import static br.edu.cesmac.si.noticia.util.VerificadorUtil.naoEstaNuloOuVazio;
 
 @ViewScoped
@@ -43,6 +44,7 @@ public class UsuarioController {
         if (usuario.getSenha().equals(senhaConfirmar)) {
             usuarioService.cadastrar(usuario);
             SessaoUtil.colocarVariavelNaSessao(USUARIO_DA_SESSAO, usuario);
+            PagesUtil.redirectPage(PAGINA_PRINCPAL);
         } else {
             MensagemUtil.erro(MENSAGEM_SENHAS_NAO_CONFEREM_TITULO, MENSAGEM_SENHAS_NAO_CONFEREM_DETALHES);
         }
@@ -113,6 +115,14 @@ public class UsuarioController {
         return listaPefil;
     }
 
+    public String retornarNomePerfil(Integer idPerfil){
+        for(ModeloPerfil modeloPerfil : Arrays.asList(ModeloPerfil.values())){
+            if(modeloPerfil.getCodigo().equals(idPerfil)){
+                return modeloPerfil.getDescricao();
+            }
+        }
+        return "ERRO";
+    }
 
     public Date getDataMaxima() {
         return DataUtil.getDataMaxima();

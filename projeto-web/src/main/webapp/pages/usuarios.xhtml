@@ -23,6 +23,9 @@
                 <p:column headerText="Celular" width="20%">
                     <p:outputLabel value="#{usuario.celular}"/>
                 </p:column>
+                <p:column headerText="Permissão" width="20%">
+                    <p:outputLabel value="#{usuarioMB.retornarNomePerfil(usuario.idPerfil)}"/>
+                </p:column>
                 <p:column headerText="Ação" width="40%">
                     <p:commandButton rendered="#{usuario.ativo}" value="Inativar Usuario"
                                      action="#{usuarioMB.abrirDialogConfirmarInativarUsuario()}">
@@ -43,10 +46,6 @@
                 </p:column>
             </p:dataTable>
         </h:form>
-        <ui:include src="dialogs/usuario/dlgConfirmarAtivarUsuario.xhtml"/>
-        <ui:include src="dialogs/usuario/dlgConfirmarInativarUsuario.xhtml"/>
-        <ui:include src="dialogs/usuario/dlgConfirmarExcluirUsuario.xhtml"/>
-        <ui:include src="dialogs/usuario/dlgAlterarUsuario.xhtml"/>
     </ui:define>
 </ui:composition>
 </html>
