@@ -4,7 +4,6 @@ import br.edu.cesmac.si.noticia.JPA.JpaUtil;
 import br.edu.cesmac.si.noticia.domain.Usuario;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import java.util.List;
 
@@ -35,6 +34,7 @@ public class UsuarioJPA {
         em.getTransaction().commit();
         em.close();
     }
+
     public List<Usuario> listar() {
         EntityManager em = JpaUtil.getEntityManager();
         List<Usuario> usuarios = em.createQuery("select u from usuarios u").getResultList();
@@ -42,7 +42,7 @@ public class UsuarioJPA {
         return usuarios;
     }
 
-    public Boolean emailNaoUtilizado (String email) {
+    public Boolean emailNaoUtilizado(String email) {
         EntityManager em = JpaUtil.getEntityManager();
         em.getTransaction().begin();
         Query query = em.createQuery(QUERY_VERIFICAR_EMAIL_NAO_UTILIZADO)

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<p:dialog id="modalAvaliarFilme" dynamic="true" widgetVar="dlgAvaliarFilme"
+          header="Avaliar Membro Produção" width="auto" height="auto"
+          closable="false" resizable="false" modal="true">
+    <h:form id="formAvaliarFilme">
+        <p:growl id="msgAvaliarFilme" showDetail="true"/>
+        <h:panelGrid columns="1" id="pnlAvaliarFilme">
+            <p:outputLabel value="Qual a nota do filme #{filmeMB.filme.nome}?"/>
+            <p:selectOneMenu filterMatchMode="startsWith" value="#{filmeMB.nota}"
+                             required="true" requiredMessage="Nota é um campo obrigatório!">
+                <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                <f:selectItems value="#{filmeMB.listaValoresNota}"/>
+            </p:selectOneMenu>
+            <div align="center">
+                <p:commandButton value="Avaliar" action="#{filmeMB.avaliar()}"
+                                 update=":formAvaliarFilme:msgAvaliarFilme"/>
+                <p:commandButton value="Cancelar" action="#{filmeMB.fecharDialogAvaliar()}" immediate="true"/>
+            </div>
+        </h:panelGrid>
+    </h:form>
+</p:dialog>
+
+</html>

@@ -2,6 +2,7 @@ package br.edu.cesmac.si.noticia.repository;
 
 import br.edu.cesmac.si.noticia.JPA.JpaUtil;
 import br.edu.cesmac.si.noticia.domain.Filme;
+import br.edu.cesmac.si.noticia.domain.NotaFilme;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -40,10 +41,24 @@ public class FilmeJPA {
         return filmes;
     }
 
-    public Double retornarNota(Integer idFilme) {
+    public Double retornarNota(Integer idFilme, Integer idUsuario) {
         EntityManager em = JpaUtil.getEntityManager();
-        em.getTransaction().begin();
-        Query query = em.createQuery("SELECT sum(nota)/count(*) AS nota FROM nota_filme WHERE id_filme = :id_filme", Filme.class)
+        Query query = em.createQuery("SELECT nota AS nota FROM nota_filme WHERE id_filme = :id_filme AND id_usuario = :id_usuario", Double.class)
+                .setParameter("id_filme", idFilme)
+                .setParameter("id_usuario", idUsuario);
+        Double resultadoLocal;
+        try {
+            resultadoLocal= (Double) query.getSingleResult();
+        } catch (NoResultException e) {
+            resultadoLocal = null;
+        }
+        em.close();
+        return resultadoLocal;
+    }
+
+    public Double retornarNotaGeral(Integer idFilme) {
+        EntityManager em = JpaUtil.getEntityManager();
+        Query query = em.createQuery("SELECT sum(nota)/count(*) AS nota FROM nota_filme WHERE id_filme = :id_filme", Double.class)
                 .setParameter("id_filme", idFilme);
         Double resultadoLocal;
         try {
@@ -53,6 +68,15 @@ public class FilmeJPA {
         }
         em.close();
         return resultadoLocal;
+    }
+
+
+    public void avaliarFilme(NotaFilme notaFilme) {
+        EntityManager em = JpaUtil.getEntityManager();
+        em.getTransaction().begin();
+        em.persist(notaFilme);
+        em.getTransaction().commit();
+        em.close();
     }
 
 }

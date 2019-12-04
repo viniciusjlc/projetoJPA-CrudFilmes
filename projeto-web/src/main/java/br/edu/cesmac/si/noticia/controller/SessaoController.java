@@ -1,5 +1,6 @@
 package br.edu.cesmac.si.noticia.controller;
 
+import br.edu.cesmac.si.noticia.JPA.JpaUtil;
 import br.edu.cesmac.si.noticia.domain.Usuario;
 import br.edu.cesmac.si.noticia.enums.ModeloPerfil;
 import br.edu.cesmac.si.noticia.repository.SessaoJPA;
@@ -48,6 +49,7 @@ public class SessaoController {
 
     public void sair(){
         usuarioSessao = null;
+        JpaUtil.initThreadEntityManager();
         SessaoUtil.excluirVariavelDaSessao(USUARIO_DA_SESSAO);
         controleSessao();
     }

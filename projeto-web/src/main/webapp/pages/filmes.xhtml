@@ -28,17 +28,32 @@
                     <br/>
                     <p:outputLabel value="Sinopse: " style="color: goldenrod"/>
                     <p:outputLabel value="#{filme.sinopse}"/>
+                    <br/>
+                    <p:outputLabel value="Nota Geral: " style="color: goldenrod"/>
+                    <p:outputLabel value="#{filmeMB.retornarNotaGeral(filme.id)}"/>
+                    <br/>
+                    <p:outputLabel value="Sua Nota: " style="color: goldenrod"
+                                   rendered="#{filmeMB.retornarNota(filme.id)!=null}"/>
+                    <p:outputLabel value="#{filmeMB.retornarNota(filme.id)}"
+                                   rendered="#{filmeMB.retornarNota(filme.id)!=null}"/>
                 </p:column>
-                <p:column style="text-align: center; width: 18%;"
-                          rendered="#{sessaoMB.permissaoEscritor()}">
+                <p:column style="text-align: center; width: 18%;">
                     <p:row>
+                        <p:commandButton value="Avaliar Filme" style="color: goldenrod"
+                                         actionListener="#{filmeMB.abrirDialogAvaliar()}"
+                                         rendered="#{filmeMB.retornarNota(filme.id)==null}">
+                            <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
+                        </p:commandButton>
+                        <p:commandButton value="Filme já Avaliado" disabled="true"
+                                         rendered="#{filmeMB.retornarNota(filme.id)!=null}"/>
+                    </p:row>
+                    <p:row rendered="#{sessaoMB.permissaoEscritor()}">
                         <p:commandButton value="Alterar" action="#{filmeMB.abrirDialogAlterar()}">
                             <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
                         </p:commandButton>
                         <p:commandButton value="Excluir" action="#{filmeMB.abrirDialogExcluir()}">
                             <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>
                         </p:commandButton>
-
                         <p:commandButton value="Visualizar Produção"
                                          action="#{filmeMB.abrirDialogVisualizarProducao()}">
                             <f:setPropertyActionListener value="#{filme}" target="#{filmeMB.filme}"/>

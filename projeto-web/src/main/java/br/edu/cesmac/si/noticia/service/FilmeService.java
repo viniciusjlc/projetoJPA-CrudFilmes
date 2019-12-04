@@ -2,6 +2,7 @@ package br.edu.cesmac.si.noticia.service;
 
 import br.edu.cesmac.si.noticia.domain.Filme;
 import br.edu.cesmac.si.noticia.domain.MembroProducao;
+import br.edu.cesmac.si.noticia.domain.NotaFilme;
 import br.edu.cesmac.si.noticia.repository.FilmeJPA;
 import br.edu.cesmac.si.noticia.repository.MembrosProducaoJPA;
 import br.edu.cesmac.si.noticia.util.MensagemUtil;
@@ -49,11 +50,27 @@ public class FilmeService {
         }
     }
 
+
+    public boolean avaliar(NotaFilme notaFilme){
+        try{
+            filmeJPA.avaliarFilme(notaFilme);
+            return true;
+        }catch (Exception e){
+            MensagemUtil.erro("Erro ao Avaliar Filme", e.getLocalizedMessage());
+            return false;
+        }
+    }
+
+
     public List<MembroProducao> listarMembrosProducaoNaoFilme(List<MembroProducao> listaMembrosFilme){
         return new MembrosProducaoJPA().listarMembrosForaFilme(listaMembrosFilme);
     }
 
-    public Double retornarNota(Integer idFilme){
-        return filmeJPA.retornarNota(idFilme);
+    public Double retornarNota(Integer idFilme, Integer idUsuario){
+        return filmeJPA.retornarNota(idFilme, idUsuario);
+    }
+
+    public Double retornarNotaGeral(Integer idFilme){
+        return filmeJPA.retornarNotaGeral(idFilme);
     }
 }

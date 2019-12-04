@@ -43,8 +43,10 @@ public class UsuarioController {
     public void cadastrar() {
         if (usuario.getSenha().equals(senhaConfirmar)) {
             usuarioService.cadastrar(usuario);
-            SessaoUtil.colocarVariavelNaSessao(USUARIO_DA_SESSAO, usuario);
-            PagesUtil.redirectPage(PAGINA_PRINCPAL);
+            PagesUtil.atualizarComponente("formLogin");
+            PagesUtil.fecharDialog("dlgCadastrarSenha");
+            PagesUtil.fecharDialog("dlgCadastrarUsuario");
+            MensagemUtil.sucesso("Cadastro realizado com sucesso!");
         } else {
             MensagemUtil.erro(MENSAGEM_SENHAS_NAO_CONFEREM_TITULO, MENSAGEM_SENHAS_NAO_CONFEREM_DETALHES);
         }

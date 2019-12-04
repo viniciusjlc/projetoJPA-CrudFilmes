@@ -13,6 +13,10 @@ public final class JpaUtil {
 	private JpaUtil() {
 	}
 
+	public static void initThreadEntityManager(){
+		threadEntityManager = new ThreadLocal<EntityManager>();
+	}
+
 	public static EntityManager getEntityManager() {
 		if (entityManagerFactory == null) {
 			entityManagerFactory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
@@ -24,7 +28,6 @@ public final class JpaUtil {
 			entityManager = entityManagerFactory.createEntityManager();
 			JpaUtil.threadEntityManager.set(entityManager);
 		}
-		
 		return entityManager;
 	}
 

@@ -6,10 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d75c68b-034b-4ae2-9b80-c04b51e7ff16" name="Default Changelist" comment="">
+    <list default="true" id="9d75c68b-034b-4ae2-9b80-c04b51e7ff16" name="Default Changelist" comment="- Ad">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/NotaFilme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgAvaliarFilme.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/JPA/JpaUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/JPA/JpaUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/UsuarioJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/UsuarioJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,7 +99,17 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,23 +117,13 @@
         <option value="Interface" />
         <option value="CSS File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="XHTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AlterarUsuario</find>
-      <find>Usuario</find>
-      <find>usuario</find>
-      <find>generos_filmes</find>
-      <find>CadastrarUsuario</find>
-      <find>Generos</find>
-      <find>CadastrarGenero</find>
-      <find>abrir</find>
-      <find>funcaoProducao</find>
-      <find>Alterar</find>
       <find>fechar</find>
       <find>genero</find>
       <find>FORM</find>
@@ -135,6 +144,16 @@
       <find>Filme</find>
       <find>membroProducao</find>
       <find>conteudo</find>
+      <find>Excluir</find>
+      <find>avaliar</find>
+      <find>connection.pool_size</find>
+      <find>&lt;property</find>
+      <find>&lt;hibernate-</find>
+      <find>session-f</find>
+      <find>sair</find>
+      <find>AUTO</find>
+      <find>hibernate.cfg.xml</find>
+      <find>maxActiveSessions</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -149,10 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/GeneroJPA.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/styleGeral.css" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/util/PagesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/dialogs/genero/dlgCadastrarGenero.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/dialogs/genero/dlgAlterarGenero.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/GeneroService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/dialogs/genero/dlgListarGeneros.xhtml" />
@@ -176,30 +191,34 @@
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Genero.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/FuncaoProducao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/ClassificacaoIndicativa.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/MembrosProducaoJPA.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgExcluirFilme.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgVisualizarProducao.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Queries.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/SessaoJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Filme.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/validators/EmailValidatorAlterar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Constantes/Constantes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/principal.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgListarMembrosProducao.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/NotaFilme.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgAvaliarFilme.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/SessaoJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/JPA/JpaUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/UsuarioJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" />
       </list>
     </option>
   </component>
@@ -239,13 +258,7 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="Projeto" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="compiler" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Projeto" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="tomcat7" type="36feed69:MavenProjectsStructure$PluginNode" />
+          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
@@ -319,7 +332,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="noticia" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="noticia" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
@@ -329,34 +351,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="noticia" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="noticia" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="noticia" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="Constantes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="noticia" type="462c0819:PsiDirectoryNode" />
-              <item name="validators" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
@@ -394,6 +388,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -413,16 +416,6 @@
               <item name="template" type="462c0819:PsiDirectoryNode" />
               <item name="dialogs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Noticias" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="usuario" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -437,7 +430,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -466,8 +459,8 @@
       <recent name="br.edu.cesmac.si.noticia.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\resources\img" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\template\dialogs\filme" />
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\resources\img" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\pages\dialogs\filme" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\pages\dialogs\membrosProducao" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\Trabalho Sandney\projeto-web\src\main\webapp\pages\dialogs\genero" />
@@ -702,7 +695,7 @@
       <workItem from="1574971823388" duration="8169000" />
       <workItem from="1575084467459" duration="2444000" />
       <workItem from="1575280653848" duration="18986000" />
-      <workItem from="1575452960010" duration="10080000" />
+      <workItem from="1575452960010" duration="21601000" />
     </task>
     <task id="LOCAL-00001" summary="- Alterando configurações;&#10;- Adicionando novas classes;">
       <created>1574815323674</created>
@@ -739,11 +732,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575460814448</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Realizando ajustes de permissões;">
+      <created>1575476722953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575476722953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130197000" />
+    <option name="totallyTimeSpent" value="141718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -758,8 +758,8 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Persistence" order="0" sideWeight="0.502439" side_tool="true" weight="0.35627836" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.72284645" visible="true" weight="0.35779122" />
-      <window_info id="Structure" order="2" sideWeight="0.27715355" side_tool="true" visible="true" weight="0.35779122" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8544776" visible="true" weight="0.26701966" />
+      <window_info id="Structure" order="2" sideWeight="0.14552239" side_tool="true" weight="0.26701966" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
@@ -769,7 +769,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28477904" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.56301147" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.23404256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -785,7 +785,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.13842663" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.295764" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="JSF" order="6" />
@@ -804,7 +804,8 @@
     <MESSAGE value="- Adicionando dialogs do CRUD de genero e seus respectivos métodos;" />
     <MESSAGE value="- Adicionando dialogs do CRUD de membros de produção e seus respectivos métodos;" />
     <MESSAGE value="- Realizando ajustes gerais;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Realizando ajustes gerais;" />
+    <MESSAGE value="- Realizando ajustes de permissões;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Realizando ajustes de permissões;" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -814,159 +815,6 @@
     <SUITE FILE_PATH="coverage/Noticias$Tomcat_9_0.ic" NAME="Tomcat 9.0 Coverage Results" MODIFIED="1573168795978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/GeneroJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/GeneroService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/util/MensagemUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/GeneroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/MembrosProducaoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgConfirmarInativarUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/dialogs/dlgCadastrarUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/genero/dlgCadastrarGenero.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/genero/dlgAlterarGenero.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgCadastrarFilme.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="49" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/MembroProducao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Genero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/FuncaoProducao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/JPA/JpaUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/ClassificacaoIndicativa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgExcluirFilme.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgConfirmarExcluirUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgExcluirMembroProducao.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -995,85 +843,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/MembrosProducaoJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="36" column="100" selection-start-line="36" selection-start-column="100" selection-end-line="36" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#34#1" expanded="true" />
-            <element signature="e#0#34#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Queries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="140" selection-start-line="4" selection-start-column="140" selection-end-line="4" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgAlterarMembroProducao.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/UsuarioJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#24#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
-            <element signature="e#2543#2544#0" expanded="true" />
-            <element signature="e#2584#2585#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#2688#2689#0" expanded="true" />
-            <element signature="e#2751#2752#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4130#4131#0" expanded="true" />
-            <element signature="e#4171#4172#0" expanded="true" />
-            <element signature="e#4205#4206#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
-            <element signature="e#4274#4275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#22#1" expanded="true" />
-            <element signature="e#0#76#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1088,16 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,30 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="120" column="24" lean-forward="true" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1967#1968#0" expanded="true" />
-            <element signature="e#1998#1999#0" expanded="true" />
-            <element signature="e#2047#2048#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Constantes/Constantes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1160,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/SessaoJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/img/filme2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1177,53 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgListarMembrosProducao.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="63" column="67" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1301">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Filme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1238,6 +927,311 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/6.1/primefaces-6.1.jar!/META-INF/primefaces-p.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="11982" column="19" lean-forward="true" selection-start-line="11982" selection-start-column="19" selection-end-line="11982" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/util/SessaoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/EntityTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgExcluirFilme.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgCadastrarFilme.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/JPA/JpaUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/MembrosProducaoJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="36" column="100" selection-start-line="36" selection-start-column="100" selection-end-line="36" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#34#1" expanded="true" />
+            <element signature="e#0#34#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/SessaoJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/GeneroJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#23#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgAvaliarFilme.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/ClassificacaoIndicativa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Filme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/FuncaoProducao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Genero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/MembroProducao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/NotaFilme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#1998#1999#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.4.4.Final/hibernate-core-5.4.4.Final-sources.jar!/org/hibernate/cfg/annotations/reflection/JPAMetadataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/jdk.crypto.cryptoki/sun/security/pkcs11/SessionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="110" column="11" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="160" column="101" lean-forward="true" selection-start-line="160" selection-start-column="101" selection-end-line="160" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#22#1" expanded="true" />
+            <element signature="e#0#91#1" expanded="true" />
+            <element signature="e#0#76#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/UsuarioJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#24#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Queries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="22" column="84" lean-forward="true" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="45" column="55" lean-forward="true" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/dialogs/dlgCadastrarSenha.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/dialogs/dlgCadastrarUsuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="9" column="82" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
         </state>
       </provider>
     </entry>

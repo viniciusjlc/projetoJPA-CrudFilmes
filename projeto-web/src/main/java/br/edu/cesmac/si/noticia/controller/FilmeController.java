@@ -2,10 +2,12 @@ package br.edu.cesmac.si.noticia.controller;
 
 import br.edu.cesmac.si.noticia.domain.Filme;
 import br.edu.cesmac.si.noticia.domain.MembroProducao;
+import br.edu.cesmac.si.noticia.domain.NotaFilme;
 import br.edu.cesmac.si.noticia.enums.ModeloClassificacoesIndicativas;
 import br.edu.cesmac.si.noticia.service.FilmeService;
 import br.edu.cesmac.si.noticia.util.MensagemUtil;
 import br.edu.cesmac.si.noticia.util.PagesUtil;
+import br.edu.cesmac.si.noticia.util.SessaoUtil;
 import br.edu.cesmac.si.noticia.util.VerificadorUtil;
 
 import javax.faces.bean.ManagedBean;
@@ -24,6 +26,7 @@ public class FilmeController {
     private Filme filme;
     private List<MembroProducao> listaOutrosMembros;
     private MembroProducao membroProducao;
+    private Integer nota;
 
     public FilmeController() {
         this.filmeService = new FilmeService();
@@ -70,6 +73,15 @@ public class FilmeController {
         }
     }
 
+    public void avaliar() {
+        NotaFilme notaFilme = new NotaFilme(Double.valueOf(nota), filme.getId(), new SessaoController().getUsuarioSessao().getId());
+        if (filmeService.avaliar(notaFilme)) {
+            MensagemUtil.sucesso("Filme avaliado com sucesso!");
+            nota = null;
+            fecharDialogAvaliar();
+        }
+    }
+
     public List<ModeloClassificacoesIndicativas> getClassificacoesIndicativas() {
         return Arrays.asList(ModeloClassificacoesIndicativas.values());
     }
@@ -86,6 +98,10 @@ public class FilmeController {
 
     public void abrirDialogExcluir() {
         PagesUtil.abrirDialogAtualizado("ExcluirFilme");
+    }
+
+    public void abrirDialogAvaliar() {
+        PagesUtil.abrirDialogAtualizado("AvaliarFilme");
     }
 
     public void abrirDialogVisualizarProducao() {
@@ -117,6 +133,12 @@ public class FilmeController {
         PagesUtil.atualizarComponente(FORM_FILME);
     }
 
+    public void fecharDialogAvaliar() {
+        filme = new Filme();
+        PagesUtil.fecharDialog("dlgAvaliarFilme");
+        PagesUtil.atualizarComponente(FORM_FILME);
+    }
+
     public void adicionarMembroFilme(MembroProducao membroProducao) {
         filme.getMembrosProducao().add(membroProducao);
         listaOutrosMembros.remove(membroProducao);
@@ -135,7 +157,27 @@ public class FilmeController {
         this.filme = filme;
     }
 
-    public Double getNota(){
-        return filmeService.retornarNota(filme.getId());
+    public Double retornarNota(Integer idFilme){
+        return filmeService.retornarNota(idFilme, new SessaoController().getUsuarioSessao().getId());
+    }
+
+    public Double retornarNotaGeral(Integer idFilme){
+        return filmeService.retornarNotaGeral(idFilme);
+    }
+
+    public Integer getNota() {
+        return nota;
+    }
+
+    public void setNota(Integer nota) {
+        this.nota = nota;
+    }
+
+    public List<Integer> getListaValoresNota(){
+        List<Integer> listaValoresNota = new ArrayList<>();
+        for(int i=1; i<=10;i++){
+            listaValoresNota.add(i);
+        }
+        return listaValoresNota;
     }
 }
