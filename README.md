@@ -7,7 +7,7 @@ Também é necessário alterar o URL, USER e PASSWORD na pasta "projeto-web/src/
 
 O sistema está configurado para rodar normalmente no intelliJ;
 
-O sistema deve ser executado apontando para o endereço "http://localhost:8899/pages/index.xhtml", que vai redirecionar para o endereço " http://localhost:8899/pages/login.faces";
+O sistema deve ser executado apontando para o endereço "http://localhost:8899/index.xhtml", que vai redirecionar para o endereço " http://localhost:8899/pages/login.faces";
 
 Com o sistema executando e na página de login, o acesso pode ser feito por meio de um cadastro ou pelo email: "teste@teste.com" e senha: "teste";
 
