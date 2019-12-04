@@ -27,22 +27,24 @@
                     <p:outputLabel value="#{usuarioMB.retornarNomePerfil(usuario.idPerfil)}"/>
                 </p:column>
                 <p:column headerText="Ação" width="40%">
-                    <p:commandButton rendered="#{usuario.ativo}" value="Inativar Usuario"
-                                     action="#{usuarioMB.abrirDialogConfirmarInativarUsuario()}">
-                        <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
-                    </p:commandButton>
-                    <p:commandButton rendered="#{!usuario.ativo}" value="Ativar Usuario"
-                                     action="#{usuarioMB.abrirDialogConfirmarAtivarUsuario()}">
-                        <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
-                    </p:commandButton>
-                    <p:commandButton value="Alterar Dados de Usuario" rendered="#{sessaoMB.permissaoModerador()}"
-                                     action="#{usuarioMB.abrirDialogAlterarUsuario()}">
-                        <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
-                    </p:commandButton>
-                    <p:commandButton rendered="#{sessaoMB.permissaoAdministrador()}" value="Excluir Usuario"
-                                     action="#{usuarioMB.abrirDialogConfirmarExcluirUsuario()}">
-                        <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
-                    </p:commandButton>
+                    <div align="center">
+                        <p:commandButton rendered="#{usuario.ativo}" value="Inativar Usuario"
+                                         action="#{usuarioMB.abrirDialogConfirmarInativarUsuario()}">
+                            <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
+                        </p:commandButton>
+                        <p:commandButton rendered="#{!usuario.ativo}" value="Ativar Usuario"
+                                         action="#{usuarioMB.abrirDialogConfirmarAtivarUsuario()}">
+                            <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
+                        </p:commandButton>
+                        <p:commandButton value="Alterar Dados de Usuario" rendered="#{sessaoMB.permissaoModerador()}"
+                                         action="#{usuarioMB.abrirDialogAlterarUsuario()}">
+                            <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
+                        </p:commandButton>
+                        <p:commandButton rendered="#{sessaoMB.permissaoAdministrador()}" value="Excluir Usuario"
+                                         action="#{usuarioMB.abrirDialogConfirmarExcluirUsuario()}">
+                            <f:setPropertyActionListener value="#{usuario}" target="#{usuarioMB.usuarioSelecionado}"/>
+                        </p:commandButton>
+                    </div>
                 </p:column>
             </p:dataTable>
         </h:form>

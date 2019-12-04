@@ -6,37 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d75c68b-034b-4ae2-9b80-c04b51e7ff16" name="Default Changelist" comment="- Realizando ajustes gerais;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/validators/EmailValidatorAlterar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/filme8.jpg" afterDir="false" />
+    <list default="true" id="9d75c68b-034b-4ae2-9b80-c04b51e7ff16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/domain/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/MembrosProducaoJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/MembrosProducaoJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/FilmeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/principal.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgExcluirFilme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgExcluirFilme.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgVisualizarProducao.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/filme/dlgVisualizarProducao.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgListarMembrosProducao.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgListarMembrosProducao.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/templateGeral.xhtml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -218,15 +191,15 @@
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/FilmeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/repository/FilmeJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/validators/EmailValidatorAlterar.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/shared/Constantes/Constantes.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/controller/SessaoController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/principal.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/membrosProducao/dlgListarMembrosProducao.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/filmes.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml" />
       </list>
     </option>
   </component>
@@ -448,7 +421,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
               <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="membrosProducao" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -729,7 +702,7 @@
       <workItem from="1574971823388" duration="8169000" />
       <workItem from="1575084467459" duration="2444000" />
       <workItem from="1575280653848" duration="18986000" />
-      <workItem from="1575452960010" duration="6707000" />
+      <workItem from="1575452960010" duration="10080000" />
     </task>
     <task id="LOCAL-00001" summary="- Alterando configurações;&#10;- Adicionando novas classes;">
       <created>1574815323674</created>
@@ -759,11 +732,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574960487991</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Realizando ajustes gerais;">
+      <created>1575460814448</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575460814448</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126824000" />
+    <option name="totallyTimeSpent" value="130197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,8 +758,8 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Persistence" order="0" sideWeight="0.502439" side_tool="true" weight="0.35627836" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.78016084" visible="true" weight="0.35779122" />
-      <window_info id="Structure" order="2" sideWeight="0.21983914" side_tool="true" visible="true" weight="0.35779122" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.72284645" visible="true" weight="0.35779122" />
+      <window_info id="Structure" order="2" sideWeight="0.27715355" side_tool="true" visible="true" weight="0.35779122" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
@@ -789,7 +769,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28477904" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.20949264" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.56301147" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -797,7 +777,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.3846154" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49924356" visible="true" weight="0.38952535" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49924356" weight="0.25531915" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -1111,13 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/service/UsuarioService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1146,13 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="46" column="52" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="26" column="54" lean-forward="true" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1204,13 +1170,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/img/filme2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="101" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/cesmac/si/noticia/enums/ModeloClassificacoesIndicativas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1258,6 +1217,27 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template/dialogs/usuario/dlgAlterarUsuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/usuarios.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
         </state>
       </provider>
     </entry>

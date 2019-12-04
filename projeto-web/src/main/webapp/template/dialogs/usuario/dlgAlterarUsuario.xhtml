@@ -65,7 +65,8 @@
                 <span style="color: red;">*</span>
             </p:outputLabel>
             <p:selectOneMenu filterMatchMode="startsWith" value="#{usuarioMB.usuarioSelecionado.idPerfil}"
-                             rendered="true" requiredMessage="Perfil é obrigatorio">
+                             rendered="true" requiredMessage="Perfil é obrigatorio"
+            disabled="#{usuarioMB.usuarioSelecionado.idPerfil == 4}">
                 <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
                 <f:selectItems var="ModeloPerfil"
                                value="#{usuarioMB.listaPefil}"
