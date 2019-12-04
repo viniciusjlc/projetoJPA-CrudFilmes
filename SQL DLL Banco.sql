@@ -18,7 +18,6 @@ CREATE TABLE public.usuarios (
 	data_hora_ultima_modificacao timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 	ativo bool NULL DEFAULT true,
 	id_perfil int4 NOT NULL DEFAULT 1,
-	CONSTRAINT usuarios_cpf_key UNIQUE (cpf),
 	CONSTRAINT usuarios_email_key UNIQUE (email),
 	CONSTRAINT usuarios_pkey PRIMARY KEY (id),
 	CONSTRAINT perfil_fk FOREIGN KEY (id_perfil) REFERENCES perfis(id)
